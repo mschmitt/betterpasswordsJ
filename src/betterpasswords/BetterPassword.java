@@ -12,11 +12,14 @@ import java.util.Random;
  * @author martin
  */
 public class BetterPassword {
-    public String getBetterPassword() {
-        RandomWordWithMinMaxLengthFromFile rff = new RandomWordWithMinMaxLengthFromFile();
+    RandomWordWithMinMaxLengthFromFile rff = new RandomWordWithMinMaxLengthFromFile();    
+
+    public BetterPassword() {
         rff.setWordMinLength(3);
         rff.setWordMaxLength(4);
+    }
 
+    public String getBetterPassword() {
         
         while (true){
             // try until we can ensure a "good quality" password
